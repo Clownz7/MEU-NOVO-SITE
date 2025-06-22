@@ -3,128 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Retro System - Jogos de PC</title>
+  <title>Xbox Dev Mode - Oferta Exclusiva</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212;
-      color: #f0f0f0;
+    /* Reset básico */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b0b0b;
+      color: #fff;
+      line-height: 1.6;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
     header {
-      background: #282c34;
-      padding: 20px;
+      background: linear-gradient(90deg, #107C10, #0A610A);
+      padding: 20px 40px;
       text-align: center;
       font-size: 2.5rem;
-      font-weight: bold;
-      letter-spacing: 3px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      box-shadow: 0 3px 8px rgba(16,124,16,0.8);
+    }
+    nav {
+      background: #121212;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: inset 0 -1px 3px rgba(255,255,255,0.1);
+    }
+    nav a {
       color: #61dafb;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #a0eaff;
     }
     main {
       flex: 1;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    section {
-      margin-bottom: 40px;
-      background: #1e1e1e;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.7);
-    }
-    h2 {
-      color: #61dafb;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.5;
-      color: #ccc;
-    }
-    .price {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #f39c12;
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-    .btn-buy {
-      display: inline-block;
-      background: #61dafb;
-      color: #121212;
-      padding: 12px 25px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(97,218,251,0.5);
-      transition: background 0.3s ease;
-    }
-    .btn-buy:hover {
-      background: #21a1f1;
-      color: #fff;
-    }
-    .images {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .images img {
-      max-width: 250px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.8);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .images img:hover {
-      transform: scale(1.05);
-    }
-    footer {
-      background: #282c34;
+    .intro {
       text-align: center;
-      padding: 15px 10px;
-      color: #999;
-      font-size: 0.9rem;
-      box-shadow: inset 0 1px 3px rgba(0,0,0,0.7);
+      margin-bottom: 50px;
     }
-  </style>
-</head>
-<body>
-  <header>
-    Retro System - Jogos de PC
-  </header>
-  <main>
-    <section>
-      <h2>Sobre o Retro System</h2>
-      <p>
-        O Retro System oferece uma coleção exclusiva de jogos clássicos para PC, trazendo nostalgia e diversão para você e seus amigos. Com preços acessíveis e servidores confiáveis, garantimos a melhor experiência para nossos clientes.
-      </p>
-    </section>
-    <section>
-      <h2>Preços e Pacotes</h2>
-      <p>Pacote Básico: R$ 29,90 — Inclui 5 jogos clássicos selecionados.</p>
-      <p>Pacote Premium: R$ 49,90 — Acesso completo a toda a biblioteca Retro System.</p>
-      <p class="price">Promoção especial: Pacote Premium por R$ 39,90!</p>
-      <a href="#" class="btn-buy">Comprar Agora</a>
-    </section>
-    <section>
-      <h2>Galeria</h2>
-      <div class="images">
-        <img src="https://via.placeholder.com/250x140?text=Jogo+1" alt="Jogo 1" />
-        <img src="https://via.placeholder.com/250x140?text=Jogo+2" alt="Jogo 2" />
-        <img src="https://via.placeholder.com/250x140?text=Jogo+3" alt="Jogo 3" />
-        <img src="https://via.placeholder.com/250x140?text=Jogo+4" alt="Jogo 4" />
-      </div>
-    </section>
-  </main>
-  <footer>
-    © 2025 Retro System - Todos os direitos reservados
-  </footer>
-</body>
-</html>
+    .intro h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      color: #107C10;
+      text-shadow: 0 0 8px #107C10;
+    }
+    .intro p {
+      font-size: 1.2rem;
+      color: #ddd;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    video {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(16,124,16,0.7);
+    }
+    section.vendas {
+      background-color: #121212;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.8);
+      margin-bottom: 50px;
+    }
+    section.vendas h2 {
+      color: #107C10;
+      margin-bottom: 25px;
+      font-size: 2rem;
+      text-align: center;
+      text-shadow: 0 0 5px #107C10;
+    }
+    .precos {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .preco-card {
+      background: #1a1a1a;
+      border: 2px solid #107C10;
+      border-radius: 12px;
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(16,124,16,0.5);
+      transition: transform 0.3s ease;
+      cursor: poin
